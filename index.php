@@ -1,5 +1,5 @@
 <?php
-
+$tiempo_inicial = microtime(true);
 $token = "5321906055:AAEEjFuyO7IsFZQJTLGy41ZFHtvbn_dq52A";
 
 $website = "https://api.telegram.org/bot".$token;
@@ -59,5 +59,6 @@ $url = $website."/senddocument?chat_id=".$chatId."&document=".$documenturl."&cap
 file_get_contents($url);
 
 }
-
+$tiempo_final = microtime(true);
+sendMessage($website, $chat_id, $tiempo_final-$tiempo_inicial)
 ?>
